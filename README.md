@@ -9,7 +9,7 @@ To use GoFFprobe, you need to have `ffprobe` installed on your system. `ffprobe`
 After ensuring that `ffprobe` is installed, you can add GoFFprobe to your project by running:
 
 ```
-go get github.com/yourusername/GoFFprobe
+go get github.com/ZertyCraft/GoFFprobe
 ```
 
 ## Usage
@@ -21,7 +21,7 @@ package main
 
 import (
     "fmt"
-    "github.com/yourusername/GoFFprobe"
+    "github.com/ZertyCraft/GoFFprobe"
 )
 
 func main() {
@@ -48,11 +48,3 @@ func main() {
 - Retrieve media file information using `ffprobe`.
 - Flexible options to customize the `ffprobe` command.
 - Parses `ffprobe` output to a user-friendly format.
-
-## Contributions
-
-Contributions are welcome. Please feel free to submit pull requests or raise issues.
-
-## License
-
-[Your chosen license]
