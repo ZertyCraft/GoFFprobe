@@ -5,7 +5,7 @@ import (
 	"os/exec"
 )
 
-// Options définit les options pour exécuter ffprobe.
+// Options defines the options for running ffprobe.
 type Options struct {
 	ShowFormat  bool
 	ShowStreams bool
@@ -13,7 +13,7 @@ type Options struct {
 
 var execCommand = exec.Command
 
-// Execute exécute ffprobe avec les options fournies et retourne les données parsées.
+// Execute runs ffprobe with the provided options and returns the parsed data.
 func Execute(filePath string, opts Options) (map[string]interface{}, error) {
 	args := buildArgs(opts, filePath)
 	cmd := execCommand("ffprobe", args...)
@@ -31,7 +31,7 @@ func Execute(filePath string, opts Options) (map[string]interface{}, error) {
 	return data, nil
 }
 
-// buildArgs construit les arguments de la ligne de commande pour ffprobe.
+// buildArgs builds the command line arguments for ffprobe.
 func buildArgs(opts Options, filePath string) []string {
 	args := []string{"-v", "quiet", "-print_format", "json"}
 
